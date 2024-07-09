@@ -18,6 +18,8 @@ import Profile from "./pages/User/Profile.jsx";
 
 //
 import Home from "./pages/Home.jsx";
+import AllMovies from "./pages/Movies/AllMovies.jsx";
+import MovieDetails from "./pages/Movies/MovieDetails.jsx";
 
 // Auth
 import AdminRoute from "./pages/Admin/AdminRoute.jsx";
@@ -30,6 +32,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
+      <Route path="/movies" element={<AllMovies />} />
+      <Route path="/movies/:id" element={<MovieDetails />} />
 
       {/*  */}
       <Route path="/login" element={<Login />} />
