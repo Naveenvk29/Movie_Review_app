@@ -1,0 +1,15 @@
+import { configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query/react";
+import { apiSlice } from "./Api/ApiSlice";
+import authReducer from "./features/authSlice";
+
+const store = configureStore({
+  reducer: {
+    [apiSlice.reducerPath]: apiSlice.reducer,
+    auth: authReducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
+});
+setupListeners(store.dispatch);
+
+export default store;
