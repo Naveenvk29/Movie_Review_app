@@ -1,1 +1,1 @@
-export const { DB_NAME } = "MOVIES_REVIEWs";
+export const { DB_NAME } = "Movies_Reviews_app";
