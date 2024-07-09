@@ -13,23 +13,31 @@ import {
 import store from "./Redux/store.js";
 import { Provider } from "react-redux";
 
-//
+//Auth
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import PrivateRoute from "./pages/User/PrivateRoute.jsx";
 import Profile from "./pages/User/Profile.jsx";
 
-//app routes
+//Admin
+import AdminRoute from "./pages/Admin/AdminRoute.jsx";
+import GenreManager from "./pages/Admin/GenreManager.jsx";
+// public
+import Home from "./pages/Home.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      {/* <Route index={true} path="/" element={<Home />} /> */}
+      <Route index={true} path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
       <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />
+      </Route>
+
+      <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/movies/genre" element={<GenreManager />} />
       </Route>
     </Route>
   )
