@@ -7,7 +7,7 @@ const MovieCard = ({ movie }) => {
         <img
           src={movie.image}
           alt={movie.name}
-          className="h-[20rem] w-[20rem]  rounded m-0 p-0 transition duration-300 ease-in-out transform group-hover:opacity hover:bg-black"
+          className="h-[20rem] w-[20rem]  rounded m-0 p-0 transition duration-300 ease-in-out transform group-hover:opacity-50  hover:bg-opacity-95"
         />
       </Link>
 

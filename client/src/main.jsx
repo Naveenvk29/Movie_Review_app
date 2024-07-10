@@ -21,12 +21,14 @@ import Home from "./pages/Home.jsx";
 import AllMovies from "./pages/Movies/AllMovies.jsx";
 import MovieDetails from "./pages/Movies/MovieDetails.jsx";
 
-// Auth
+// Admin
 import AdminRoute from "./pages/Admin/AdminRoute.jsx";
 import GenreList from "./pages/Admin/GenreList.jsx";
 import CreateMovie from "./pages/Admin/CreateMovie.jsx";
 import AdminMoviesList from "./pages/Admin/AdminMoviesList.jsx";
 import UpdateMovie from "./pages/Admin/UpdateMovie.jsx";
+import DashboardHome from "./pages/Admin/AdminDashbord/DashboardHome.jsx";
+import AllComments from "./pages/Admin/Allcomments.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -48,6 +50,8 @@ const router = createBrowserRouter(
         <Route path="/admin/movies/create" element={<CreateMovie />} />
         <Route path="/admin/movies-list" element={<AdminMoviesList />} />
         <Route path="/admin/movies/update/:id" element={<UpdateMovie />} />
+        <Route path="/admin/movies/dashboard" element={<DashboardHome />} />
+        <Route path="/admin/movies/comments" element={<AllComments />} />
       </Route>
     </Route>
   )

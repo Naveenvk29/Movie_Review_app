@@ -40,7 +40,6 @@ const CreateMovie = () => {
         ...prevData,
         genre: genres[0]?._id || "",
       }));
-      console.log(genres[0]?._id);
     }
   }, [genres]);
 
@@ -123,7 +122,7 @@ const CreateMovie = () => {
 
   return (
     <div className="container flex justify-center items-center mt-4">
-      <form>
+      <form className="mt-14">
         <p className="text-green-200 w-[50rem] text-2xl mb-4">Create Movie</p>
         <div className="mb-4">
           <label className="block">
@@ -196,7 +195,7 @@ const CreateMovie = () => {
           </label>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 text-white">
           <label
             style={
               !selectedImage
