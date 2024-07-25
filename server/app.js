@@ -20,6 +20,14 @@ app.use("/api/v1/genre", genreRoutes);
 app.use("/api/v1/movies", moviesRoutes);
 app.use("/api/v1/upload", uploadRoutes);
 
+// test
+
+app.get("/test", (req, res) => {
+  res.send("Hello from server!");
+});
+
+// Serve static files from the React app
+
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 
