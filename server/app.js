@@ -2,17 +2,18 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
-app.use(
-  cors({
-    origin: "https://movie-review-client.onrender.com", // The origin you want to allow
-  })
-);
+
 import userRoutes from "./Routes/userRoutes.js";
 import genreRoutes from "./Routes/genreRoutes.js";
 import moviesRoutes from "./Routes/moviesRoutes.js";
 import uploadRoutes from "./Routes/uploadRoutes.js";
 
 const app = express();
+app.use(
+  cors({
+    origin: "https://movie-review-client.onrender.com", // The origin you want to allow
+  })
+);
 
 // middlewares
 app.use(express.json());
